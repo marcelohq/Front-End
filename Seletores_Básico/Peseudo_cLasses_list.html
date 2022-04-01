@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lag="pt-br">
+
+    <head>
+        <tilte>Pseudo Classes e listas com CSS</tilte>
+        <meta charset="UTF-8">
+
+        <style>
+
+            a{
+                color:red;
+            }
+            .curriculo:hover{
+                background-color:coral;
+            }
+
+            a:hover{
+                background-color: rgb(136, 255, 0);
+            }
+            a:visited{
+                color:none;
+            }
+            a:active{
+                color:darkgreen;
+            }
+            
+            .lista:hover{
+
+                background-color: brown;
+                width: 50px;
+
+            }
+
+            ol li{
+
+                list-style-type:lower-latin;
+                
+               
+            
+            }
+            ul li{
+                list-style-type: decimal-leading-zero;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <p>Este é o meu <a class="curriculo" href="/Tags_básicas/Curriculo.html">currículo</a></p>
+        <p>Esta é a minha <a href="/Tags_básicas/home.html">página</a></p>
+        
+        <ol>
+            <li class="lista">Testado</li>
+            <li>Testado</li>
+            <li>Testado</li>
+            <li>Testado</li>
+        </ol>
+    
+        <ul>
+            <li>Mais</li>
+            <li>Mais</li>
+            <li>Mais</li>
+            <li>Mais</li>
+        </ul>
+
+    </body>
+
+
+</html>
