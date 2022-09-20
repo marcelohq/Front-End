@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title>Document</title>
+</head>
+<body>
+
+    <select id="artistas" onchange="artistaSelecionado()">
+
+        <option value="Tyler the creator">Tyler the creator</option>
+        <option value="Frank Ocean">Frank Ocean</option> 
+        <option value="Pearl jam">Pearl Jam</option>
+        <option value="Link Park">Link Park</option>
+        <option value="Chico Buarque">Chico Buarque</option>
+
+    </select>
+
+    <p id="paragrafo">Artista escolhido: </p>
+
+    <script>
+
+        function artistaSelecionado(){
+
+            document.getElementById("paragrafo").innerHTML = "Artista escolhido: ";
+            let opcao = document.getElementById("artistas").value;
+            document.getElementById("paragrafo").innerHTML = document.getElementById("paragrafo").innerHTML + opcao;
+
+
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

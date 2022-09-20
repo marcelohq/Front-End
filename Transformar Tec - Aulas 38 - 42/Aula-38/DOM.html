@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Primeira Manipulação com o DOM</title>
+</head>
+<body>
+
+    <div class="header" id="header">
+        
+        <input type="button" value="Clique em mim">
+        
+    </div>
+
+    <div class="form" id="form">
+
+        <input type="text" class="form_input" id="form_input" value="Marcelo">
+
+    </div>
+
+    <div class="nome dados">
+        <span>Marcelo Henrique Silva dos Santos</span>
+    </div>
+
+    <div class="phone dados">
+        <span>(81)99500-5065</span>
+    </div>
+
+    <script>
+
+        // getElementById(): Retorna o elemento que estiver contendo o nome do ID passado
+        var element = document.getElementById("header");
+        console.log(element);
+
+
+        var data = document.getElementById("form_input").value;
+
+        console.log(data);
+
+         // getElementsByClassName():  Esse método retorna um HTMLCollection de todos elementos que estiverem contendo o nome da classe passada.
+
+        var dados = document.getElementsByClassName("dados");
+        console.log(dados);
+
+        // getElementsByTagName():  Esse método retorna um HTMLCollection de todos elementos  contendo a tag name passada.
+
+        var span = document.getElementsByTagName("span");
+        console.log(span)
+
+
+
+        // querySelector():  Esse método retorna o primeiro elemento que se equipara ao seletor CSS passado. Caso não haja um seletor, retorna null.
+
+        var dados1 = document.querySelector(".dados");
+        console.log(dados1);
+
+        // querySelectorAll():  Esse método retorna todos os elementos que se equiparam ao seletor CSS passado. Caso não haja um seletor, retorna null.
+
+        var dados2 = document.querySelectorAll('.dados');
+        console.log(dados2);
+
+
+    </script>
+
+</body>
+</html>

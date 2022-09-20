@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Calculadora com DOM</title>
+</head>
+<body>
+
+    <div class="cabecalho">
+        <h1>Calculadora com DOM</h1>
+    </div>
+    
+    <div class="conteudo">
+
+        <input type="number" name="n1" id="n1" placeholder="Primeiro número" class="campo_numero">
+
+        <input type="submit" class="btn_calc" id="soma" value="+" onclick="soma()">
+        <input type="submit" class="btn_calc" id="subtracao" value="-" onclick="subtracao()">
+        <input type="submit" class="btn_calc" id="multiplicao" value="*" onclick="multiplicao()">
+        <input type="submit" class="btn_calc" id="divisao" value="/" onclick="divisao()">
+
+        <input type="number" name="n2" id="n2" placeholder="Segundo número" class="campo_numero">
+
+        <input type="submit" value="Limpar" onclick="limpaTudo()"> 
+
+        <p id="resultado">Resultado: </p>
+
+    </div>
+</body>
+
+<script>
+
+    function limpa(){
+
+        document.getElementById("resultado").innerHTML = "Resultado: ";
+
+    }
+
+    function limpaTudo(){
+        
+        document.getElementById("n1").value = "";
+        document.getElementById("n2").value = "";
+        limpa();
+
+    }
+
+
+    function soma(){
+
+        limpa();
+
+        let primeiroNumero = Number(document.getElementById("n1").value);
+        let segundoNumero = Number(document.getElementById("n2").value);
+
+        let resultado = primeiroNumero + segundoNumero;
+        document.getElementById('resultado').innerHTML += resultado;
+
+    }
+
+    function soma(){
+
+        limpa();
+
+        let primeiroNumero = parseFloat(document.getElementById("n1").value);
+        let segundoNumero = parseFloat(document.getElementById("n2").value);
+
+        let resultado = primeiroNumero + segundoNumero;
+        document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML + resultado;
+
+    }
+
+    function subtracao(){
+
+        limpa();
+
+        let primeiroNumero = parseFloat(document.getElementById("n1").value);
+        let segundoNumero = parseFloat(document.getElementById("n2").value);
+
+        let resultado = primeiroNumero - segundoNumero;
+        document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML + resultado;
+
+    }
+
+    function multiplicao(){
+
+        limpa();
+
+        let primeiroNumero = parseFloat(document.getElementById("n1").value);
+        let segundoNumero = parseFloat(document.getElementById("n2").value);
+
+        let resultado = primeiroNumero * segundoNumero;
+        document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML + resultado;
+
+    }
+
+    function divisao(){
+
+        limpa();
+
+        let primeiroNumero = parseFloat(document.getElementById("n1").value);
+        let segundoNumero = parseFloat(document.getElementById("n2").value);
+
+        let resultado = primeiroNumero / segundoNumero;
+        document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML + resultado;
+
+    }
+
+</script>
+
+</html>
+

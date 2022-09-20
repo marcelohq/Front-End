@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <title>Testando Eventos</title>
+
+    </head>
+    <body>
+
+        <!-- Evento em linha -->
+        
+        <!-- onclick - EVENTO ACONTECE QUANDO CLICAMOS NO ELEMENTO -->
+        <h1 onclick="this.innerHTML = 'O patrão ficou maluco!!'">
+            Cliente consciente clica aqui!
+        </h1>
+
+        <h2 id="h2" >
+            Esse texto será modificado quando você clicar nele.
+        </h2>
+
+        <script>
+
+            //Evento externo
+
+            document.getElementById("h2").addEventListener('click', function modificaTexto(){
+            
+                document.getElementById("h2").innerHTML = "Viu como Eventos são legais ? haha!";
+        
+        })
+    
+        
+        </script>
+
+    </body>
+
+    
+    </html>
